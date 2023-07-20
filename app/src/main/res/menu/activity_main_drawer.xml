@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Welcome" />
+
+
+        <item android:title="Travels">
+            <menu>
+                <item
+                    android:id="@+id/nav_trips"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_airplane_ticket_24"
+                    android:title="Trips" />
+                <item
+                    android:id="@+id/nav_offers"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_local_offer_24"
+                    android:title="Offers" />
+                <item
+                    android:id="@+id/searchTown"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_search_24"
+                    android:title="Search City" />
+                <item
+                    android:id="@+id/nav_bookings"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_card_travel_24"
+                    android:title="Bookings" />
+            </menu>
+        </item>
+
+
+        <item android:title="Admin">
+            <menu>
+
+
+                <item
+                    android:id="@+id/nav_admin"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_login_24"
+                    android:title="Offices Login" />
+            </menu>
+        </item>
+
+
+        <item android:title="Other">
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_settings_24"
+                    android:title="Settings" />
+                <item
+                    android:id="@+id/nav_about"
+                    android:checkable="true"
+                    android:icon="@drawable/ic_baseline_developer_mode_24"
+                    android:title="About Me" />
+            </menu>
+        </item>
+
+    </group>
+</menu>

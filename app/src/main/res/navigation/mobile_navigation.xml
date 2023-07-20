@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ihu.dev.travelbook.ui.home.HomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_trips"
+        android:name="ihu.dev.travelbook.ui.trips.Trips"
+        android:label="Trips"
+        tools:layout="@layout/fragment_trips">
+        <action
+            android:id="@+id/action_nav_trips_to_details"
+            app:destination="@id/details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_offers"
+        android:name="ihu.dev.travelbook.ui.offers.Offers"
+        android:label="Offers"
+        tools:layout="@layout/fragment_offers">
+        <action
+            android:id="@+id/action_nav_offers_to_details"
+            app:destination="@id/details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_bookings"
+        android:name="ihu.dev.travelbook.ui.bookings.Bookings"
+        android:label="Bookings"
+        tools:layout="@layout/fragment_bookings" />
+
+    <fragment
+        android:id="@+id/nav_admin"
+        android:name="ihu.dev.travelbook.ui.admin.Admin"
+        android:label="Login"
+        tools:layout="@layout/fragment_admin">
+        <action
+            android:id="@+id/action_nav_admin_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_nav_admin_to_signup"
+            app:destination="@id/signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="ihu.dev.travelbook.ui.settings.Settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="ihu.dev.travelbook.ui.about.About"
+        android:label="About Me"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/signup"
+        android:name="ihu.dev.travelbook.ui.admin.signup.Signup"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signup_to_nav_admin"
+            app:destination="@id/nav_admin" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="ihu.dev.travelbook.ui.admin.dashboard.Dashboard"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_nav_admin"
+            app:destination="@id/nav_admin" />
+        <action
+            android:id="@+id/action_dashboard_to_addTrips"
+            app:destination="@id/addTrips" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTrips"
+        android:name="ihu.dev.travelbook.ui.admin.dashboard.addtrips.AddTrips"
+        android:label="Add Trips">
+        <action
+            android:id="@+id/action_addTrips_to_dashboard"
+            app:destination="@id/dashboard" />
+        <action
+            android:id="@+id/action_addTrips_to_dashboard2"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTrips"
+        android:name="ihu.dev.travelbook.ui.admin.dashboard.updatetrips.UpdateTrips"
+        android:label="Update Trip"
+        tools:layout="@layout/fragment_update_trips" />
+    <fragment
+        android:id="@+id/details"
+        android:name="ihu.dev.travelbook.ui.trips.details.Details"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_details_to_bookTrip"
+            app:destination="@id/bookTrip" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookTrip"
+        android:name="ihu.dev.travelbook.ui.trips.book.BookTrip"
+        android:label="fragment_book_trip"
+        tools:layout="@layout/fragment_book_trip" />
+    <fragment
+        android:id="@+id/searchTown"
+        android:name="ihu.dev.travelbook.ui.SearchTown"
+        android:label="Search Town"
+        tools:layout="@layout/fragment_search_town" />
+
+</navigation>
